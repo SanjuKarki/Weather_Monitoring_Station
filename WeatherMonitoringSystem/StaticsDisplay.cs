@@ -1,9 +1,11 @@
 namespace WeatherApp
 {
+    /// Manages the display of temperature statistics based on collected data.
     public class StatisticsDisplay : IObserver, IDisplay
     {
         private List<double> currenttemperatureData;
 
+        /// Initializes a new instance of the StatisticsDisplay class.
         public StatisticsDisplay()
         {
             currenttemperatureData = new List<double>();
@@ -15,6 +17,7 @@ namespace WeatherApp
             Display();
         }
 
+        /// Displays the current temperature statistics.
         public void Display()
         {
             if (currenttemperatureData.Any())
